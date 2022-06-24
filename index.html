@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe Game</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body onload="timer()">
+
+    <h1>Tic Tac Toe</h1>
+    <h2>Its your turn, <span class="display_player" id="playerid">Player X</span> <span style="padding-left: 50px;">Score: </span> <span id="score">0-0</span> 
+    <span style="padding-left: 50px;">Current Mode:</span><span id="playermode">2 Player</span> 
+    <span style="padding-left: 50px;">Time left: </span><span id="timer"></span> </h2>
+
+    <div class="game_board">
+      <div class='row'>
+        <div class="one" onclick="insertXO('tl');"><span class="xo" id="tl"></span></div>
+        <div class="two" onclick="insertXO('ml')"><span class="xo" id="ml"></span></div>
+        <div class="three" onclick="insertXO('bl')"><span class="xo" id="bl"></span></div>
+      </div>
+      <div class='row'>
+        <div class="four" onclick="insertXO('tm')"><span class="xo" id="tm"></span></div>
+        <div class="five" onclick="insertXO('mm')"><span class="xo" id="mm"></span></div>
+        <div class="six" onclick="insertXO('bm')"><span class="xo" id="bm"></span></div>
+      </div>
+      <div class='row'>
+        <div class="seven" onclick="insertXO('tr')"><span class="xo" id="tr"></span></div>
+        <div class="eight" onclick="insertXO('mr')"><span class="xo" id="mr"></span></div>
+        <div class="nine" onclick="insertXO('br')"><span class="xo" id="br"></span></div>
+      </div>
+    </div>
+
+    <button class="new_game" onclick="newgame()">New Game</button>
+    <button class="reset" onclick="window.location.reload();">Reset</button>
+    <button class="new_game" onclick="singlebutton()">Single Player</button>
+    <button class="new_game" onclick="singlebutton(); hardmodetoggle();">Single Player(Hard Mode)</button>
+    <button class="new_game" onclick="doublebutton()">2 Player</button>
+  </body>
+
+
+</html>
